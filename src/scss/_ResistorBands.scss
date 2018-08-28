@@ -1,0 +1,234 @@
+﻿$rbc-0: black;
+$rbc-1: hsl(20,52,29);
+$rbc-2: red;
+$rbc-3: orange;
+$rbc-4: yellow;
+$rbc-5: green;
+$rbc-6: blue;
+$rbc-7: violet;
+$rbc-8: grey;
+$rbc-9: white;
+
+$rfc-0: white;
+$rfc-1: white;
+$rfc-2: white;
+$rfc-3: white;
+$rfc-4: white;
+$rfc-5: white;
+$rfc-6: white;
+$rfc-7: white;
+$rfc-8: white;
+$rfc-9: black;
+
+$slide-time: 500ms;
+
+@mixin Set_Inctive($fg,$bg) {
+	color: fade-out($fg,.2);
+	background-color: darken($bg,10%);
+}
+
+@mixin Set_Active($fg,$bg) {
+	$s: lightness($bg);
+
+	@if saturation($bg) == 0 {
+		$s: 0;
+	}
+
+	box-shadow: hsl(hue($bg),$s*2,80) 0 0 10px 2px;
+	text-shadow: 0 0 8px white;
+	color: $fg;
+	background-color: lighten($bg,10%);
+	z-index: 1;
+}
+
+.Band {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	/*&::after {
+		background-color: white;
+		color: white;
+		height: 35px;
+		width: 100%;
+		content: "";
+		display: block;
+		z-index: -1;
+		position: absolute;
+	}*/
+	button {
+		position: relative; // Makes the glow show in front of next button.
+		border: solid 1px hsl(0,0,20);
+		//border-radius: 1px;
+		width: 100%;
+		cursor: pointer;
+		height: 35px;
+		font-weight: bold;
+		outline-style: none;
+		transition-delay: 0ms;
+		transition-duration: 200ms;
+		transition-property: box-shadow, text-shadow, background-color, color;
+		transition-timing-function: ease-out;
+	}
+
+	&.active button {
+		transition-delay: $slide-time;
+	}
+
+	&-0 {
+		button {
+			@include Set_Inctive($rfc-0,$rbc-0);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-0,$rbc-0);
+		}
+	}
+
+	&-1 {
+		button {
+			@include Set_Inctive($rfc-1,$rbc-1);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-1,$rbc-1);
+		}
+	}
+
+	&-2 {
+		button {
+			@include Set_Inctive($rfc-2,$rbc-2);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-2,$rbc-2);
+		}
+	}
+
+	&-3 {
+		button {
+			@include Set_Inctive($rfc-3,$rbc-3);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-3,$rbc-3);
+		}
+	}
+
+	&-4 {
+		button {
+			@include Set_Inctive($rfc-4,$rbc-4);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-4,$rbc-4);
+		}
+	}
+
+	&-5 {
+		button {
+			@include Set_Inctive($rfc-5,$rbc-5);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-5,$rbc-5);
+		}
+	}
+
+	&-6 {
+		button {
+			@include Set_Inctive($rfc-6,$rbc-6);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-6,$rbc-6);
+		}
+	}
+
+	&-7 {
+		button {
+			@include Set_Inctive($rfc-7,$rbc-7);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-7,$rbc-7);
+		}
+	}
+
+	&-8 {
+		button {
+			@include Set_Inctive($rfc-8,$rbc-8);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-8,$rbc-8);
+		}
+	}
+
+	&-9 {
+		button {
+			@include Set_Inctive($rfc-9,$rbc-9);
+			color: darken($rfc-9,10%);
+		}
+
+		&.active button {
+			@include Set_Active($rfc-9,$rbc-9);
+			color: lighten($rfc-9,10%);
+		}
+	}
+}
+
+.SelectionFrame {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	border-radius: 1px;
+	//width: 100%;
+	//top: 0;
+	left: 0;
+	right: 0;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 35px;
+	background-color: none; //rgba(100,80,50,.8);
+	box-shadow: rgba(20,20,20,1) 0px 0px 0px 2px;
+	//top: 0px;
+	transform: translate3d(0, 0, 0);
+	transition: transform $slide-time ease-in-out;
+}
+
+.col.Shadow::before {
+	content: "";
+	position: absolute;
+	@include OpaqueInputBg();
+	top: 0;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+	transform: translate($shadow_x,$shadow_y);
+	z-index: -1;
+	filter: blur(1px);
+}
+
+
+.TabSpan,
+.card-header,
+.card-footer,
+.input-group {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		box-shadow: $shadow_x $shadow_y 1px black;
+		z-index: -1;
+	}
+}
+
+.input-group::before {
+	border-radius: 0.25rem;
+}

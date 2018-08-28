@@ -1,0 +1,122 @@
+﻿{
+	"vcc": {
+		"flavour": "textbox",
+		"label": "Vcc",
+		"val": "12.0",
+		"suffix": "V",
+		"autoCalc": false,
+		"desc": "Voltage of the power supply."
+	},
+	"xd": {
+		"flavour": "number",
+		"label": "✕d",
+		"val": 1,
+		"suffix": "",
+		"autoCalc": false,
+		"desc": "Number of leds."
+	},
+	"vd": {
+		"flavour": [ "textbox", "led-presets" ],
+		"label": "Vd",
+		"val": "2.2",
+		"suffix": "V",
+		"autoCalc": false,
+		"desc": "Forward voltage drop of each led."
+	},
+	"id": {
+		"flavour": "textbox",
+		"label": "Id",
+		"val": "20",
+		"suffix": "mA",
+		"autoCalc": false,
+		"desc": "Current across each led."
+	},
+	"r": {
+		"flavour": "textbox",
+		"label": "R",
+		"val": "",
+		"suffix": "Ω",
+		"autoCalc": true,
+		"desc": "Value of the load resistor."
+	},
+	"vr": {
+		"flavour": "textbox",
+		"label": "Vr",
+		"val": "",
+		"suffix": "V",
+		"autoCalc": true,
+		"desc": "Voltage drop across the load resistor."
+	},
+	"ir": {
+		"flavour": "textbox",
+		"label": "Ir",
+		"val": "20",
+		"suffix": "mA",
+		"autoCalc": false,
+		"desc": "Current through the load resistor."
+	},
+	"pr": {
+		"flavour": "textbox",
+		"label": "Pr",
+		"val": "",
+		"suffix": "mW",
+		"autoCalc": true,
+		"desc": "Power dissipation of the load resistor."
+	},
+	"vt": {
+		"flavour": "textbox",
+		"label": "Vt",
+		"val": "0.7",
+		"suffix": "V",
+		"autoCalc": false,
+		"desc": "Voltage drop across the transistor."
+	},
+	"hfe": {
+		"flavour": "textbox",
+		"label": "β",
+		"val": "100",
+		"suffix": "",
+		"autoCalc": false,
+		"desc": "Gain factor of the transistor."
+	},
+	"it": {
+		"flavour": "textbox",
+		"label": "It?",
+		"val": "",
+		"suffix": "mA",
+		"autoCalc": true,
+		"desc": "Current through the transistor."
+	},
+	"rb": {
+		"flavour": "textbox",
+		"label": "Rb",
+		"val": "",
+		"suffix": "Ω",
+		"autoCalc": true,
+		"desc": "Value of the base resistor."
+	},
+	"ib": {
+		"flavour": "textbox",
+		"label": "Ib",
+		"val": "",
+		"suffix": "mA",
+		"autoCalc": true,
+		"desc": "Current through the base resistor."
+	},
+	"vb": {
+		"flavour": "textbox",
+		"label": "Vb",
+		"val": "",
+		"suffix": "V",
+		"autoCalc": true,
+		"desc": "Voltage drop across the base resistor."
+	},
+	"vl": {
+		"flavour": "textbox",
+		"label": "Vl",
+		"val": "5",
+		"suffix": "V",
+		"autoCalc": false,
+		"desc": "Voltage of the logic supply."
+	}
+}

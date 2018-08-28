@@ -1,0 +1,53 @@
+﻿--power supply--
+vcc
+=?
+
+--led--
+xd
+=?
+
+vd
+=?
+
+id
+=?
+
+--resistor--
+r
+=vr/(ir/1000)
+=pr/(ir/1000^2)
+
+vr
+=vcc-(vd*xd)
+
+ir
+=(vr/r)*1000
+=?(hfe*(ib/1000))*1000
+
+pr
+=vr*(ir/1000)*1000
+=r*ir^2
+
+--transistor--
+vt
+=.7
+
+hfe (β)
+=100
+
+it
+=(vb/rb)*1000
+
+--base resistor--
+rb
+=vb/(ib/1000)
+
+ib
+=((ir/1000)/hfe)*1000
+
+vb
+=vl-vt
+
+--logic supply--
+vl
+=?

@@ -1,0 +1,10 @@
+npm i --save react react-dom 
+npm i --save-dev webpack webpack-dev-server babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-2
+npm i --save bootstrap jquery popper.js
+npm i --save-dev css-loader node-sass sass-loader style-loader
+npm i --save npm-run-all
+npm i --save-dev postcss-loader precss autoprefixer
+npm i --save-dev react-html-id
+npm i --save react-octicons
+npm i --save-dev react-svg-loader
+npm i --save url-parse

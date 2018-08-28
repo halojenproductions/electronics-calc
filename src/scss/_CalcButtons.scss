@@ -1,0 +1,44 @@
+﻿.btn {
+	&.btn-outline-primary {
+		background-color: #e9ecef;
+	}
+
+	&:focus,
+	&.focus {
+		box-shadow: none;
+	}
+
+	&:hover {
+		box-shadow: rgba(20,20,20,.1) 1px 1px 3px inset;
+	}
+
+	&.active,
+	&.active:focus,
+	&:not(:disabled):not(.disabled):active:focus,
+	&:not(:disabled):not(.disabled).active:focus {
+		box-shadow: rgba(20,20,20,.4) 1px 1px 5px inset;
+
+		svg.gear path {
+			animation-name: rotategear;
+			animation-duration: 2s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+			transform-origin: 50% 50%;
+			display: inline-block;
+		}
+	}
+
+	svg.gear {
+		fill: currentColor;
+	}
+}
+
+@keyframes rotategear {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(90deg);
+	}
+}
