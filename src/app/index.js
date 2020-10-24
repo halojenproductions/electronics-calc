@@ -1,10 +1,10 @@
 console.log("«Halojen¤Productions»");
 
-import React from "react";
+import * as React from "react";
 import { render } from "react-dom";
 
 import "jquery";
-import "bootstrap/dist/js/bootstrap.bundle";
+import "bootstrap";
 
 import Header from "./components/Header";
 import ResCalc from "./components/ResCalc";
@@ -18,12 +18,9 @@ import '../scss/index.scss';
 
 class Fapp extends React.Component {
 	render() {
-		const BgStyle = {
-			backgroundImage: "url('../assets/bg-h2.svg')"
-		};
 		return (
 			<div className="container" >
-				<div className="BgPattern" style={BgStyle} />
+				<div className="BgPattern" />
 				{/*<BgReflections />*/}
 				<div className="col">
 					{/*<BgBlur />*/}

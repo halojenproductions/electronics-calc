@@ -1,85 +1,120 @@
-var webpack = require("webpack");
-var path = require("path");
-//const bootstrap = require('bootstrap');
-//var bootstrap = require('node_modules/bootstrap/js/dist/util.js');
-//var jquery = require('jquery');
-//var bootstrap = require('bootstrap');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const path = require("path");
+const webpack = require("webpack");
 
+const DIST_DIR = path.resolve(__dirname, "dist");
+const SRC_DIR = path.resolve(__dirname, "src");
 
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+const { DEPLOYMENT_ENV } = process.env;
+const isProd = DEPLOYMENT_ENV === "production";
 
-var config = {
-	entry: SRC_DIR + "/app/index.js",
+const chunkName = isProd
+	? "[name].[hash]"
+	: "[name]";
+
+const prodPlugins = [
+	new MiniCssExtractPlugin({
+		filename: `[name].[hash].css`,
+	}),
+	new OptimizeCSSAssetsPlugin({})
+];
+
+const config = {
+	mode: DEPLOYMENT_ENV,
+	entry: path.join(SRC_DIR, "/app/index.js"),
 	output: {
-		path: DIST_DIR + "/app",
-		filename: "bundle.js",
-		publicPath: "/app/"
+		path: DIST_DIR,
+		chunkFilename: `${chunkName}.chunk.js`,
+		filename: `${chunkName}.js`,
+		publicPath: "/",
 	},
+
+	devServer: {
+		contentBase: [path.join(SRC_DIR, "node_modules/")],
+		hot: true,
+		port: 8080,
+	},
+
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
+				test: /\.js(x?)$/,
 				include: SRC_DIR,
 				use: {
 					loader: "babel-loader",
-					query: {
-						presets: ["react", "es2015", "stage-2"]
-					}
 				}
 			},
 			{
-				test: /\.scss$/,
-				include: [SRC_DIR, 'bootstrap/'],
+				test: /\.s?css$/,
 				use: [
 					{
-						loader: "style-loader" // creates style nodes from JS strings
+						loader:
+							isProd
+								? MiniCssExtractPlugin.loader // Builds the imported CSS into a CSS file
+								: "style-loader", // Builds the CSS inline rather than in a .css file
 					},
 					{
-						loader: "css-loader" // translates CSS into CommonJS
-					},
-					{
-						loader: 'postcss-loader', // Run post css actions
+						loader: "css-loader", // Allows CSS files to be imported in JS/TS,
 						options: {
-							plugins: function () { // post css plugins, can be exported to postcss.config.js
-								return [
-									require('precss'),
-									require('autoprefixer')
-								];
-							}
-						}
+							sourceMap: !isProd,
+						},
 					},
 					{
-						loader: "sass-loader" // compiles Sass to CSS
-					}
-				]
+						loader: "sass-loader", // Process Sass/SCSS
+						options: {
+							sassOptions: {
+								includePaths: [
+									path.resolve(__dirname, "node_modules"),
+								],
+							},
+							sourceMap: !isProd,
+						},
+					},
+				],
 			},
+			{
+				test: /\.(png|svg|jp(e?)g|gif|woff|woff2|eot|ttf|otf)$/,
+				use: [{
+					loader: "file-loader",
+					options: {
+						esModule: false,
+					}
+				}],
+			}
 		]
-	}
-};
+	},
 
-/* From the tutorial. Seems to only work in an old version. 
- * https://www.youtube.com/watch?v=uextYhQGP6k
- * Also, the rest of the internet doesn't seem to know about this way. 
- var config = {
-    entry: SRC_DIR + "/app/index.js",
-    output: {
-        path: DIST_DIR + "/app",
-        filename: "bundle.js",
-        publicPath: "/app/"
-    },
-    modules: {
-        loaders: [
-            {
-                test: /\.js?/,
-                include: SRC_DIR,
-                loader: "babel-loader",
-                query: {
-                    presets: ["react", "es2015", "stage-2"]
-                }
-            }
-        ]
-    }
-};*/
+	optimization: isProd ? {
+		minimizer: [
+			new TerserPlugin({
+				terserOptions: {
+					options: {
+						drop_console: true,
+					},
+					output: {
+						comments: false,
+					},
+				},
+			}),
+		],
+	} : undefined,
+
+	plugins: [
+		new CleanWebpackPlugin(),
+		new HtmlWebpackPlugin({
+			filename: "index.html",
+			template: path.resolve(__dirname, "src/index.html"),
+		}),
+		...isProd ? prodPlugins : []
+	],
+
+	resolve: {
+		extensions: [".js", ".jsx", ".json"],
+	},
+};
 
 module.exports = config;
