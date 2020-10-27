@@ -197,38 +197,3 @@ $slide-time: 500ms;
 	transition: transform $slide-time ease-in-out;
 }
 
-.col.Shadow::before {
-	content: "";
-	position: absolute;
-	@include OpaqueInputBg();
-	top: 0;
-	bottom: 0;
-	left: 15px;
-	right: 15px;
-	transform: translate($shadow_x,$shadow_y);
-	z-index: -1;
-	filter: blur(1px);
-}
-
-
-.TabSpan,
-.card-header,
-.card-footer,
-.input-group {
-	position: relative;
-
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		box-shadow: $shadow_x $shadow_y 1px black;
-		z-index: -1;
-	}
-}
-
-.input-group::before {
-	border-radius: 0.25rem;
-}

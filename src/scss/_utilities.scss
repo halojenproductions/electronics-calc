@@ -1,15 +1,20 @@
-﻿$bg-colour: black;
-$bg-gradient: linear-gradient(to bottom,hsl(0,0,25), hsl(0,0,0));
-$bg-gradient2: linear-gradient(to bottom,hsl(120,10,20), hsl(0,0,0));
-$panel_hue: 240;
+﻿$main-hue: 38;
+$secondary-hue: 170;
+$bg-hue: 250;
+//
+$primary: hsl($main-hue, 100%, 50%);
+$panel_hue: $secondary-hue;
+$bg-gradient: linear-gradient(to bottom,hsl($bg-hue,30,30), hsl($bg-hue,0,15));
+//$bg-gradient2: linear-gradient(to bottom,hsl($bg-hue,10,25), hsl($bg-hue,30,15));
+
 $shadow_x: 15px;
 $shadow_y: 20px;
 
 @mixin TitleShadow() {
-	text-shadow: $shadow_x $shadow_y 5px black;
+	text-shadow: $shadow_x $shadow_y 5px hsla(0,0,0,.68);
 }
 @mixin TranslucentPanelBg() {
-	background-color: hsla($panel_hue,100,20,.5);
+	background-color: hsla($panel_hue,80,20,.5);
 }
 @mixin OpaqueInputBg() {
 	background-color: hsla(0,0,0,.8);

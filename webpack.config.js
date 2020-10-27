@@ -84,7 +84,12 @@ const config = {
 						esModule: false,
 					}
 				}],
-			}
+			},
+			{
+				test: /\.vector$/,
+				enforce: 'pre',
+				use: ['react-svg-loader'],
+			},
 		]
 	},
 

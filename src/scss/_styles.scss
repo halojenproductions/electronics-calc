@@ -40,13 +40,7 @@ body {
 }
 
 
-.jumbotron {
-	color: white;
-	@include TitleShadow();
-	@include TranslucentPanelBg();
-}
-
-card .h2 {
+.card .h2 {
 	text-shadow: 1px 1px 2px hsl(0,0,25);
 }
 

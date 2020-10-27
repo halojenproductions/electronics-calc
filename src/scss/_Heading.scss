@@ -1,0 +1,89 @@
+.jumbotron {
+	color: white;
+	@include TitleShadow();
+	@include TranslucentPanelBg();
+	overflow: hidden;
+
+	h1, h2 {
+		//position: relative;
+		color: hsl($main-hue,100,50);
+		//border-bottom: solid 1px white;
+		&::after {
+			content: "";
+			position: relative;
+			display: block;
+			z-index: -1;
+			top: 0;
+			//bottom: 0;
+			left: 0;
+			//right: 15px;
+			margin-top: 4px;
+			padding-top: 2px;
+			//color: ;
+			width: 200%;
+			//height: 2px;
+			background-color: $primary;
+			box-shadow: $shadow_x $shadow_y 1px black;
+			//
+			animation-name: headingdash;
+			animation-duration: 2000ms;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: 1;
+			animation-fill-mode: both;
+			animation-delay: 2000ms;
+		}
+	}
+
+	h1 {
+		color: hsla($main-hue,0,100,.9);
+	}
+
+	&::after {
+		animation-delay: 2200ms;
+	}
+}
+
+@keyframes headingdash {
+	from {
+		left: -250%;
+	}
+
+	to {
+		left: 250%;
+	}
+}
+
+.BannerHalojen {
+	display: none; // Is technically awesome, but looks shit.
+	position: absolute;
+	top: 0px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 90%;
+	width: 90%;
+	padding: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	//margin: 0 15px 32px 15px;
+	g {
+		filter: url('#displacementFilter');
+		//margin-left: auto;
+		//margin-right: auto;
+		//transform: scale(1 0.5);
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		//height: 100%;
+		//width: 100%;
+		path {
+			fill: hsla(0,80,40,.8);
+		}
+
+		path:first-of-type {
+			fill: hsla(0,0,60,.8);
+		}
+	}
+}
+

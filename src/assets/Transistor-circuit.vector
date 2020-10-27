@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:10;">
+	<!ENTITY st1 "stroke:#000000;stroke-width:4;stroke-miterlimit:10;">
+	<!ENTITY st2 "letter-spacing:-2;">
+	<!ENTITY st3 "fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;">
+	<!ENTITY st4 "font-size:24;">
+	<!ENTITY st5 "font-size:48;">
+	<!ENTITY st6 "font-family:'MyriadPro-Bold';">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="560px" height="653px" viewBox="-0.562 -0.834 560 653"
+	 style="enable-background:new -0.562 -0.834 560 653;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+@font-face{font-family:'MyriadPro-Bold';src:url("data:;base64,\
+T1RUTwADACAAAQAQQ0ZGIB3PxzIAAACYAAAFUUdQT1Oyq8HQAAAF7AAAARJjbWFwAVoCBAAAADwA\
+AABcAAAAAQAAAAMAAAAMAAQAUAAAABAAEAADAAAARQBSAFYAZABsAHIAdP//AAAAQgBSAFYAYwBs\
+AHIAdP///7//s/+w/6T/nf+Y/5cAAQAAAAAAAAAAAAAAAAAAAAABAAQCAAEBAQ9NeXJpYWRQcm8t\
+Qm9sZAABAQEg+BsB+BQE+BwMFfs3+44cBOj6cQX3vQ/30xHLHAUREgACAQHa50NvcHlyaWdodCAx\
+OTkyLCAxOTk0LCAxOTk3LCAyMDAwLCAyMDA0IEFkb2JlIFN5c3RlbXMgSW5jb3Jwb3JhdGVkLiBB\
+bGwgcmlnaHRzIHJlc2VydmVkLiBNeXJpYWQgaXMgZWl0aGVyIGEgcmVnaXN0ZXJlZCB0cmFkZW1h\
+cmsgb3IgYSB0cmFkZW1hcmsgb2YgQWRvYmUgU3lzdGVtcyBJbmNvcnBvcmF0ZWQgaW4gdGhlIFVu\
+aXRlZCBTdGF0ZXMgYW5kL29yIG90aGVyIGNvdW50cmllcy4vRlNUeXBlIDggZGVmAAABACMDADMA\
+ADcAAEQBAE0AAFMAAFUAAAwCAAEATQDKARUBdQGjAg4CSwKZAxADJANvA7ZRi7347L0Bi734JL0D\
+iwT4iPlQ/IgG9477xRX7PveTBffoBvsg+8AV9z73kwX8kgf8Bl4V9z73k/c++5MF/Ab4vxX3PvuT\
++z77kwUOuYT3BfdU9wH3NfcDEs33K/dB9y37Hfc0E/TNjhWGrcOG1hv3Gt2hsrwfta2nu8ga4lLF\
+PqAejQcT+NenrsPHGshpuVykHqhaUpQuGz86hYNjH/crJhWNmJ6NrBvQsnBYWWBqOx9ZBvsBBL8G\
+E/TXyHBHRE5xRnF5i418Hw6wgfcS+E/3EgGu9zQD+K73HhV/bViBXRv7HDvg9xv3KunU9w3Btn9+\
+qh+q9w0FmXBPmzwb+2D7OPsU+3r7VPcM+yX3fd3KmpmnHw73HoT3C/hW9wkBzfct9633NgPNjhWG\
+scOG2hv3GPcAp8bSH8zCuuT3FRr3C1/eRb8evEo4ovsUGz5ChoJTH/ct+wEVjpihjq0b9xfdQfsg\
+ih/7NTE/+x6MHnh2i45+Hw5zi/cR9zT3EPcg9xEBzfctA/hn+C0V+4z3IPeb9xH8NP02+EL3Efup\
+9zT3jAYOrqB29533AvdT9wUBzfcr90n3KwPNFvcr9525BsmKqHSdN584m1SWeAj3MAZ+pXbjdtd6\
+yXG4XJ4IjgfFoMjG4RrJdbpjqx6xW0WaJxs6QoWDWh/3KyMVjZagjrAb0Yq1bE0aUF5lPx5PBg7Z\
+i/co+xN2+TZ3EpT5ARNw+CcW93f5NgX7NgY1+7QFE7B0PnY7ejoIiAZ733bYdNs597EY+zsG92z9\
+NgUOIIH3C/em9wmLdxKs9zAT0Pgu9xAVgnRvhWcbQU+65R/bir/E2xuzpoSDnR8TsKP3BQUT0Jdr\
+X5JjG/tKKfsJ+yP7LvAr9zLFvpWXph8OsYD3DTJ2+BT3CPdmdxKs9y73WPcsE3z4E/laFfudiQet\
+dVygTxv7CSQs+zmMHxO8+yzoKPcIysanwqoejQYTfJJDBfcbBomsicXCGvjIB/ss/IAVE7x+ioCI\
+gB5ggmhtXxtMYr/e2K/J0LqsaWKUH4yDjICDGg6gdvladwHI9ywDyBb3LPla+ywGDvtGoHb3+/ch\
+gHcSyPcsE7DIFvcs94wGE9CXjJeNlR66lbGpwxucmImJlh/3IweNgISLfRtcT21Ech+HBhOwhuUF\
++xcGjWGNXEMaDvtTgfcQ95v3BAHd9ykD3fjnFSFK+wTM+1wHRplcp24ecqO0erwbtq+Qk58fivcH\
+BYmAfIl4G119psYf90X3AfcE+wH3IAcOf5f4fZf3KZeXl6OXBvtml9CXB3+X+HiX9y6Xl5ejlwj7\
+ZpfYlwkeoGJfDAmLDAv3BAr3LAvxlZgMDPenFPjCFQAAAAABAAAACgAeACwAAURGTFQACAAEAAAA\
+AP//AAEAAAABa2VybgAIAAAAAQAAAAEABAACAAAAAQAIAAEAygAEAAAACQAcACoARABWAGwAggCg\
+AK4AwAADAAb/9QAHAAYACAAGAAYAAv/iAAYACQAH/+0ACP/tAAn//QAK//wABAAG//kACQADAAoA\
+BAALAA0ABQAGAAcAB//8AAj//AAJAAQAC//6AAUAAv/8AAb/+gAJAAgACgAKAAsACgAHAAL/+AAG\
+AAUAB//WAAj/1gAJ//gACv/lAAv/+AADAAf/9QAI//UACwAQAAQAB//4AAj/+AAJ//0ACwAVAAIA\
+B//7AAj/+wACAAIAAQAHAAAACgALAAcAAA==")}
+]]>
+</style>
+<defs>
+</defs>
+<rect x="142.025" y="539.537" style="&st0;" width="81.249" height="20.834"/>
+<line style="&st0;" x1="223.274" y1="549.953" x2="296.941" y2="549.953"/>
+<line style="&st0;" x1="68.358" y1="549.953" x2="142.025" y2="549.953"/>
+<rect x="423.4" y="302.704" style="&st0;" width="20.834" height="81.249"/>
+<line style="&st0;" x1="433.817" y1="383.953" x2="433.817" y2="457.621"/>
+<line style="&st0;" x1="433.817" y1="229.035" x2="433.817" y2="302.704"/>
+<circle style="&st0;" cx="68.358" cy="549.953" r="7.5"/>
+<circle style="&st0;" cx="433.88" cy="642.592" r="7.5"/>
+<circle style="&st0;" cx="433.817" cy="457.621" r="7.5"/>
+<circle style="&st0;" cx="433.817" cy="229.035" r="7.5"/>
+<line style="&st0;" x1="433.817" y1="70.529" x2="433.817" y2="229.035"/>
+<polygon class="fill" points="443.005,144.561 433.817,165.006 424.63,144.559 "/>
+<line style="&st0;" x1="424.63" y1="165.006" x2="443.005" y2="165.006"/>
+<circle style="&st0;" cx="433.817" cy="154.782" r="22.5"/>
+<line style="&st3;" x1="457.75" y1="139.684" x2="464.939" y2="132.494"/>
+<polygon class="fill" points="462.17,129.726 471.104,126.332 467.709,135.264 "/>
+<line style="&st3;" x1="449.736" y1="131.67" x2="456.926" y2="124.48"/>
+<polygon class="fill" points="454.157,121.712 463.09,118.318 459.695,127.25 "/>
+<circle style="&st0;" cx="433.817" cy="70.529" r="7.5"/>
+<circle style="&st0;" cx="296.942" cy="549.953" r="7.5"/>
+<line style="&st0;" x1="296.941" y1="549.953" x2="373.87" y2="549.953"/>
+<rect x="403.942" y="521.453" style="&st1;" width="4" height="57.041"/>
+<line style="&st0;" x1="403.942" y1="549.975" x2="373.87" y2="549.975"/>
+<polygon style="&st1;" points="427.161,574.309 432.025,587.113 419.221,582.248 "/>
+<polyline style="&st0;" points="407.942,536.793 433.859,510.877 433.859,505.885 "/>
+<circle style="&st0;" cx="420.057" cy="549.975" r="46.187"/>
+<polyline style="&st0;" points="407.942,563.156 433.859,589.072 433.859,594.328 "/>
+<line style="&st0;" x1="433.817" y1="457.621" x2="433.859" y2="505.885"/>
+<line style="&st0;" x1="433.838" y1="594.328" x2="433.88" y2="642.592"/>
+<text transform="matrix(1 0 0 1 403.1094 490.0088)" style="&st6; &st4;">C</text>
+<text transform="matrix(1 0 0 1 350.4424 532.6758)" style="&st6; &st4;">B</text>
+<text transform="matrix(1 0 0 1 403.1094 623.6758)" style="&st6; &st4;">E</text>
+<polyline style="&st3;" points="483.112,70.525 532.272,70.525 532.272,132.285 "/>
+<polyline style="&st3;" points="532.272,177.285 532.272,229.035 483.112,229.035 "/>
+<polyline style="&st3;" points="483.112,229.035 532.272,229.035 532.272,320.038 "/>
+<polyline style="&st3;" points="532.272,365.038 532.272,457.621 483.112,457.621 "/>
+<polyline style="&st3;" points="483.112,549.843 532.272,549.843 532.272,573.22 "/>
+<polyline style="&st3;" points="532.272,618.221 532.272,642.481 483.112,642.481 "/>
+<text transform="matrix(1 0 0 1 398.0254 40.1763)" style="&st6; &st5;">Vcc</text>
+<text transform="matrix(1 0 0 1 358.75 351.1758)" style="&st6; &st5;">R</text>
+<text transform="matrix(1 0 0 1 358.75 165.0054)" style="&st6; &st5;">D</text>
+<text transform="matrix(1 0 0 1 162.75 521.3398)" style="&st6; &st5;">B</text>
+<text transform="matrix(1 0 0 1 510.75 357.1758)" style="&st6; &st5;">V</text>
+<text transform="matrix(0.583 0 0 0.583 541.75 358.1602)" style="&st6; &st5;">r</text>
+<text transform="matrix(1 0 0 1 510.75 169.6763)" style="&st6; &st5;">V</text>
+<text transform="matrix(0.583 0 0 0.583 541.75 170.6602)" style="&st6; &st5;">d</text>
+<text transform="matrix(1 0 0 1 510.75 610.1758)" style="&st6; &st5;">V</text>
+<text transform="matrix(0.583 0 0 0.583 541.75 611.1602)" style="&st6; &st5;">t</text>
+<text transform="matrix(1 0 0 1 0 561.5313)" style="&st6; &st5;">V</text>
+<text transform="matrix(0.583 0 0 0.583 31 562.5156)" style="&st6; &st5;">l</text>
+</svg>

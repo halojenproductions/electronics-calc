@@ -1,13 +1,15 @@
 ﻿@charset "UTF-8";
 
+@import "./utilities";
 @import "~bootstrap/scss/bootstrap";
 
-@import 
-"./utilities";
 
 @import 
 "./styles", 
 "./ResistorBands", 
 "./ResistanceDisplay", 
-"./Pretty",
-"./CalcButtons";
+"./Pretty", 
+"./Diagram", 
+"./CalcButtons", 
+"./Shadows", 
+"./Heading";

@@ -1,0 +1,71 @@
+.DropShadow {
+	//display: block;
+	background-color: hsla($panel_hue,100,20,.4);
+	z-index: -2;
+	position: absolute;
+	top: $shadow_y;
+	left: $shadow_x;
+	right: -$shadow_x;
+	bottom: -$shadow_y;
+	//height: 100%;
+	//width: 100%;
+	/*margin: 0 15px;*/
+	filter: blur(1px);
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	transform: translate($shadow_x,$shadow_y);
+	border: none;
+
+	&.jumbotron {
+		margin: 0 15px 32px 15px;
+	}
+}
+
+
+.col.Shadow::before {
+	content: "";
+	position: absolute;
+	@include OpaqueInputBg();
+	top: 0;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+	transform: translate($shadow_x,$shadow_y);
+	z-index: -1;
+	filter: blur(1px);
+}
+
+
+.TabSpan,
+.card-header,
+.card-footer,
+.input-group{
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		box-shadow: $shadow_x $shadow_y 1px black;
+		z-index: -1;
+	}
+}
+.card-header::before {
+	border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-footer::before {
+	border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+
+
+.input-group::before,
+.Diagram::before {
+	border-radius: 0.25rem;
+}
+

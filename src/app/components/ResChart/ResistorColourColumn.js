@@ -3,7 +3,7 @@ import React from "react";
 
 export default class ResistorColourColumn extends React.Component {
 	onChange = (value) => () => {
-		console.log("Column got " + value);
+		//console.log("Column got " + value);
 		this.props.onChange(this.props.band, value);
 	};
 
@@ -49,7 +49,7 @@ export default class ResistorColourColumn extends React.Component {
 
 
 /*
-So 
+So
 < Component onSomething = { this.onSomething("bar") } />
 
 	Then inside that you can go:

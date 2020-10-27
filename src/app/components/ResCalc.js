@@ -1,5 +1,6 @@
 import React from "react";
-import InputRow from "./ResCalc/InputRow"
+import InputRow from "./ResCalc/InputRow";
+import SvgDiagram from "../../assets/Transistor-circuit.vector";
 //import ConDefs from "../../data/ControlDefinitions.json"
 
 export default class ResCalc extends React.Component {
@@ -94,6 +95,7 @@ export default class ResCalc extends React.Component {
 			let allow = true;
 			args.forEach((arg) => {
 				allow = allow && (newState[arg].value !== undefined && newState[arg].value > 0);
+				//debugger;
 			});
 			return allow;
 		};
@@ -105,11 +107,11 @@ export default class ResCalc extends React.Component {
 			DidACalculation = false;
 			// R
 			if (shouldCalculate("r", "vr", "ir")) {
-				console.log(newState.vr.value / (newState.ir.value / 1000));
+				//console.log(newState.vr.value / (newState.ir.value / 1000));
 				newState.r.value = newState.vr.value / (newState.ir.value / 1000);
 				newState.r.value = round(newState.r.value);
 				DidACalculation = true;
-				console.log(newState.r.value + " " + shouldCalculate("r", "vr", "ir"));
+				//console.log(newState.r.value + " " + shouldCalculate("r", "vr", "ir"));
 			}
 			if (shouldCalculate("r", "pr", "ir")) {
 				newState.r.value = newState.pr.value / ((newState.ir.value / 1000) ^ 2);
@@ -177,10 +179,10 @@ export default class ResCalc extends React.Component {
 			}
 			console.log(newState)
 			//DidACalculation = false;
-			//debugger;
 		}
 		//console.log(newState);
 
+		debugger;
 
 		this.setState(newState);
 	}
@@ -202,6 +204,7 @@ export default class ResCalc extends React.Component {
 				isCalculating: !value
 			}
 		})
+		console.log(this.state);
 	};
 
 	renderPowerSupplySection = () => (
@@ -282,7 +285,7 @@ export default class ResCalc extends React.Component {
 			label: "Ir",
 			suffix: "mA",
 			desc: "Current through the load resistor.",
-				canCalc: true,
+			canCalc: true,
 		}, {
 			id: "pr",
 			flavour: "textbox",
@@ -354,7 +357,7 @@ export default class ResCalc extends React.Component {
 			"val": "0.7",
 			"suffix": "V",
 			"canCalc": false,
-			"desc": "Voltage drop across the transistor."
+			"desc": "Voltage drop across the BE of the transistor."
 		}, {
 			id: "hfe",
 			"flavour": "textbox",
@@ -442,12 +445,28 @@ export default class ResCalc extends React.Component {
 		);
 	};
 
+	renderDiagramSection = () => {
+		return (
+			//<img srcSet="..\..\assets\Transistor-circuit.svg" className="" style={{ height: "400px", width: "100%" }} />
+			<section className="Diagram">
+				<div >
+					<div >
+						<SvgDiagram />
+					</div>
+					<div className=" Drop">
+						<SvgDiagram className="" />
+					</div>
+				</div>
+			</section>
+		);
+	};
 	render = () => (
 		<div className="card-body" style={{
 			backgroundRepeat: "no-repeat",
 			height: "100%"
 		}}>
-			{this.renderPowerSupplySection()}
+			{this.renderDiagramSection()}
+			{ this.renderPowerSupplySection()}
 			{this.renderLedsSection()}
 			{this.renderLoadResistorSection()}
 			{this.renderLogicSupplySection()}

@@ -2,11 +2,11 @@
 import ResistorColourColumn from "./ResChart/ResistorColourColumn";
 
 export default class ResChart extends React.Component {
-  state = {
-    selectedValues: [1, 0, 2],
-    total: "",
-    showTotal: true
-  };
+	state = {
+		selectedValues: [1, 0, 2],
+		total: "",
+		showTotal: true
+	};
 
 	componentDidMount() {
 		// Run the calculation upon loading.
@@ -33,7 +33,7 @@ export default class ResChart extends React.Component {
 		this.setState(newState);
 		//console.log(newState);
 	};
-	
+
 	recalculate(newState) {
 		let total = (10 * this.state.selectedValues[0]) + this.state.selectedValues[1];
 		//total = total * (10 ^ this.state.selectedValues[2]);
@@ -75,7 +75,7 @@ export default class ResChart extends React.Component {
 					</div>
 				</div>
 
-				<div className="card-footer Shadow">
+				<div className="card-footer">
 					<h3 className={"text-center LargeResistanceDisplay " + (this.state.showTotal ? "show" : null)}>{this.state.total}</h3>
 				</div>
 			</React.Fragment>

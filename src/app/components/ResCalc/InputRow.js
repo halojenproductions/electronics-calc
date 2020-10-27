@@ -1,7 +1,6 @@
 import React from "react";
 import uniqueId from 'react-html-id';
 import { GearIcon, LockIcon, KeyboardIcon } from 'react-octicons'
-import InputControl from "./InputControl";
 
 export default class InputRow extends React.Component {
 	constructor(props) {
@@ -43,7 +42,10 @@ export default class InputRow extends React.Component {
 	};
 
 	onCalcChange = (e) => {
+		console.log("onCalcChange returning " + this.props.autoCalc)
 		this.props.onCalcChange(this.props.autoCalc);
+		//console.log("onCalcChange returning " + e.currentTarget.classList.contains("active"));
+		//this.props.onCalcChange(e.currentTarget.classList.contains("active"));
 	}
 
 	onPresetChange = (value) => () => {
@@ -71,13 +73,16 @@ export default class InputRow extends React.Component {
 					</div>
 
 					{this.props.canCalc ? (
-						<div className="input-group-prepend btn-group btn-group-toggle"
-						data-toggle="buttons">
-						<button
-							className={this.props.autoCalc ? "btn btn-outline-primary active " : "btn btn-outline-primary"}
-							onClick={this.onCalcChange} >
-							<GearIcon className="gear" />
-						</button>
+						<div className="input-group-prepend ">
+							<button
+								type="button"
+								//data-toggle="button"
+								className={this.props.autoCalc ? "btn btn-outline-primary active " : "btn btn-outline-primary"}
+								aria-pressed={this.props.autoCalc ? "true" : "false"}
+								onClick={this.onCalcChange}
+								autoComplete="off">
+								<GearIcon className="gear" />
+							</button>
 						</div>
 					) : null}
 
